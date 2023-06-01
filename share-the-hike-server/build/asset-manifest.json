@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.46cc3427.css",
+    "main.js": "/static/js/main.07a4dc01.js",
+    "static/css/210.9d57e692.chunk.css": "/static/css/210.9d57e692.chunk.css",
+    "static/js/210.a6719a39.chunk.js": "/static/js/210.a6719a39.chunk.js",
+    "static/css/344.52a62cfb.chunk.css": "/static/css/344.52a62cfb.chunk.css",
+    "static/js/344.382b996d.chunk.js": "/static/js/344.382b996d.chunk.js",
+    "static/js/787.dd469fb5.chunk.js": "/static/js/787.dd469fb5.chunk.js",
+    "static/media/logo-mountain.png": "/static/media/logo-mountain.0aed2def20e1d9e0afe9.png",
+    "static/media/waves.svg": "/static/media/waves.dd7708e17830128b5122.svg",
+    "index.html": "/index.html",
+    "main.46cc3427.css.map": "/static/css/main.46cc3427.css.map",
+    "main.07a4dc01.js.map": "/static/js/main.07a4dc01.js.map",
+    "210.9d57e692.chunk.css.map": "/static/css/210.9d57e692.chunk.css.map",
+    "210.a6719a39.chunk.js.map": "/static/js/210.a6719a39.chunk.js.map",
+    "344.52a62cfb.chunk.css.map": "/static/css/344.52a62cfb.chunk.css.map",
+    "344.382b996d.chunk.js.map": "/static/js/344.382b996d.chunk.js.map",
+    "787.dd469fb5.chunk.js.map": "/static/js/787.dd469fb5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46cc3427.css",
+    "static/js/main.07a4dc01.js"
+  ]
+}

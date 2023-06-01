@@ -34,7 +34,7 @@ const LoginModal: React.FC = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8000/auth/login",
+        `${process.env.REACT_APP_API_BASE_URL}server/auth/login`,
         loginData,
         { withCredentials: true }
       );

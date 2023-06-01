@@ -13,12 +13,11 @@ import UserPage from "presentation/layout/pages/user/UserPage";
 
 function App() {
   const dispatch = useDispatch();
-
   useEffect(() => {
     const checkinUser = async () => {
       try {
         const res = await axios.get<TUser>(
-          "http://localhost:8000/auth/checkin",
+          `${process.env.REACT_APP_API_BASE_URL}server/auth/checkin`,
           {
             withCredentials: true,
           }

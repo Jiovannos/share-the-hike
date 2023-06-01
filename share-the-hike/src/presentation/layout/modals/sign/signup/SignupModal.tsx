@@ -34,7 +34,7 @@ const SignupModal: React.FC = () => {
     }
     try {
       const res = await axios.post(
-        "http://localhost:8000/auth/signup",
+        `${process.env.REACT_APP_API_BASE_URL}server/auth/signup`,
         signupData
       );
       if (res.status === 200) {

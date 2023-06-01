@@ -10,7 +10,7 @@ It uses (mostly) the [Clean Architecture](https://www.techtarget.com/whatis/defi
 
 Some of the coding practices that are used are:
 
-- Each component has it's own folder. The folder contains the TypeScript `.tsx` file, the `module.css` file, a `types.ts` file, a `.test.tsx` file and the `README.md` file.
+- Each component has it's own folder. The folder contains the TypeScript `.tsx` file, the `module.css` file, a `types.ts` file and the `README.md` file.
 - The components that must be used more than once and have a global scope are placed in the `components` folder.
 - All the other components and pages have their own folder structure based on the clean archteture.
 - The imports are always in that order for easier readability:

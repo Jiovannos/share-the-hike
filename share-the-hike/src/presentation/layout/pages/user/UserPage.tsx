@@ -20,9 +20,12 @@ const UserPage: React.FC = () => {
   useEffect(() => {
     const checkinUser = async () => {
       try {
-        const res = await axios.get<any>("http://localhost:8000/auth/checkin", {
-          withCredentials: true,
-        });
+        const res = await axios.get<any>(
+          `${process.env.REACT_APP_API_BASE_URL}server/auth/checkin`,
+          {
+            withCredentials: true,
+          }
+        );
         const { isAuthenticated, userId, userName, postsLiked, postsCreated } =
           res.data;
         if (isAuthenticated && userId && userName) {
@@ -52,9 +55,12 @@ const UserPage: React.FC = () => {
       // If tab is myposts, fetch post created by the user
       // If tab is myfavorites, fetch post liked by the user
       try {
-        const response = await axios.get(`http://localhost:8000/posts/${tab}`, {
-          withCredentials: true,
-        });
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_BASE_URL}server/posts/${tab}`,
+          {
+            withCredentials: true,
+          }
+        );
         setPosts(response.data);
       } catch (error) {
         console.error(error);
@@ -74,7 +80,7 @@ const UserPage: React.FC = () => {
     const postIds = posts.map((post) => post._id);
     try {
       const response = await axios.post(
-        `http://localhost:8000/posts/unLikeAll`,
+        `${process.env.REACT_APP_API_BASE_URL}server/posts/unLikeAll`,
         { postIds, likeAll: false },
         { withCredentials: true }
       );
@@ -87,7 +93,6 @@ const UserPage: React.FC = () => {
   if (!user.isAuthenticated) {
     return <PleaseLogIn />;
   }
-
   return (
     <div className={css.userPage}>
       <div className={css.tabsPanel}>

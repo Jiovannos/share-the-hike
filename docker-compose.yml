@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  #mongo
+  mongo_cnt:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - ./data:/data/db
+    ports: # First is my port, second is the port of the container
+      - 27010:27017
+  #The app
+  sharethehike_cnt:
+    build:
+      context: ./share-the-hike-server
+      dockerfile: Dockerfile
+    environment:
+      - MONGO_DB_URL=mongodb://mongo_cnt:27017
+      - MONGO_DB_DATABASE=share_the_hike
+    restart: always
+    tty: true # Leaves the terminal of the container open
+    ports:
+      - 8000:8000 # First is my port, second is the port of the container
+    depends_on: # Wait for the mongo container to start properly
+      - mongo_cnt

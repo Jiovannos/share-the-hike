@@ -23,9 +23,12 @@ const PostPage: React.FC = () => {
   useEffect(() => {
     const checkinUser = async () => {
       try {
-        const res = await axios.get<any>("http://localhost:8000/auth/checkin", {
-          withCredentials: true,
-        });
+        const res = await axios.get<any>(
+          `${process.env.REACT_APP_API_BASE_URL}server/auth/checkin`,
+          {
+            withCredentials: true,
+          }
+        );
         const { isAuthenticated, userId, userName, postsLiked, postsCreated } =
           res.data;
         if (isAuthenticated && userId && userName) {
@@ -108,7 +111,9 @@ const PostPage: React.FC = () => {
       return;
     }
     const fetchPosts = async () => {
-      const res = await axios.get("http://localhost:8000/posts/");
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_BASE_URL}server/posts/getall`
+      );
       setOriginalPosts(res.data);
     };
     fetchPosts();

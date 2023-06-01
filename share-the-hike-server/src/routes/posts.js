@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const router = express.Router();
 
 // ----------GET POSTS BY FILTER----------
-router.get("/", async (req, res) => {
+router.get("/getall", async (req, res) => {
   let query = {};
 
   // Apply filters
@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
 });
 
 // ----------CREATE POST----------
-router.post("/", async (req, res) => {
+router.post("/create", async (req, res) => {
   const { userName, title, body } = req.body;
 
   const post = new Post({

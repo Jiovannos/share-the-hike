@@ -23,9 +23,13 @@ const UserButton: React.FC = () => {
 
   const handleSignOutClick = async () => {
     try {
-      await axios.post("http://localhost:8000/auth/logout", null, {
-        withCredentials: true,
-      });
+      await axios.post(
+        `${process.env.REACT_APP_API_BASE_URL}server/auth/logout`,
+        null,
+        {
+          withCredentials: true,
+        }
+      );
       window.location.reload();
     } catch (err) {
       console.error("Error during logout", err);

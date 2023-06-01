@@ -22,7 +22,7 @@ const NavBar: React.FC = () => {
   const handleResetClick = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:8000/initialize`,
+        `${process.env.REACT_APP_API_BASE_URL}server/initialize`,
         {},
         { withCredentials: true }
       );
@@ -39,15 +39,15 @@ const NavBar: React.FC = () => {
         <h2 className={css.logoText}>Share the Hike</h2>
       </div>
       <div className={css.navLinks}>
+        <div className={css.initialize} onClick={handlePreResetClick}>
+          {` ❗ Initialize`}
+        </div>
         <Link to="/posts" className={css.link}>
           Posts
         </Link>
         <Link to="/user" className={css.link}>
           User
         </Link>
-        <div className={css.link} onClick={handlePreResetClick}>
-          Reset
-        </div>
       </div>
       <div className={css.spacer}>
         <UserButton />

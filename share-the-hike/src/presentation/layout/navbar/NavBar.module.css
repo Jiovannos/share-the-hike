@@ -70,3 +70,10 @@
   color: rgb(26, 128, 40);
   font-weight: bold;
 }
+
+.initialize {
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(224, 54, 54);
+}

@@ -23,7 +23,6 @@ router.post("/signup", async (req, res) => {
 // ----------LOGIN----------
 router.post("/login", async (req, res) => {
   const { password, userName } = req.body;
-
   // Check if user exists
   const user = await User.findOne({ userName });
   if (!user) {
@@ -43,7 +42,6 @@ router.post("/login", async (req, res) => {
     }
   );
   res.cookie("auth", token, { httpOnly: true });
-
   res.json({ message: "Logged in successfully" });
 });
 
