@@ -1,0 +1,42 @@
+.postFunctionalities {
+  background-color: none;
+  z-index: 10;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  column-gap: 1rem;
+}
+.filterMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.filterMenu button,
+.sortMenu select {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #444;
+  background: #f2f2f2;
+  cursor: pointer;
+  width: 180px;
+}
+
+.filterMenu button:focus,
+.sortMenu select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+.clear {
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}

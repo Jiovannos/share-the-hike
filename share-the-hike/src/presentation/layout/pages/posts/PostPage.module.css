@@ -1,0 +1,19 @@
+.postPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+.pageNumbers {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+.number {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: var(--primary-color);
+}

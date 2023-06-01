@@ -1,6 +1,45 @@
-# Getting Started with Create React App
+# Getting Started with Share the Hike
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project is available on [sharethehike.com](https://github.com/facebook/create-react-app).
+
+## Code
+
+Share the Hike is build using the MERN stack (MongoDB, Express, React, Node.js) and TypeScript. Redux Toolkit is used for state management.
+
+It uses (mostly) the [Clean Architecture](https://www.techtarget.com/whatis/definition/clean-architecture).
+
+Some of the coding practices that are used are:
+
+- Each component has it's own folder. The folder contains the TypeScript `.tsx` file, the `module.css` file, a `types.ts` file, a `.test.tsx` file and the `README.md` file.
+- The components that must be used more than once and have a global scope are placed in the `components` folder.
+- All the other components and pages have their own folder structure based on the clean archteture.
+- The imports are always in that order for easier readability:
+  - Css
+  - Types
+  - Images
+  - React modules
+  - Other modules
+  - Components
+  - Other
+- `Comments` are used where needed, but the code is written in a way that it is self-explanatory.
+- `Global state` is prefered over `props` for easier readability and less props-drilling.
+- `Css modules` are prefered over `styled components` for easier readability and less code.
+- `Inline styles` are used only when they can be changed conditionally.
+- Reuse of patterns, elements and colors are used for consistency and better user engagement.
+
+## Functionalities
+
+While still on development, Share the Hike has the following functionalities:
+
+- `Authentication` (Login, Signup, Logout)
+- `Posts` (Read, Like, Filter, Sort)
+
+### Initialization of posts
+
+- With a click of a button 100 dummy posts are fetched from ['https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts).
+- Then for each userId a User is created in mongoDB.
+- Then for each post a Post is created in mongoDB by a User.
+- Then each User randomly likes some posts.
 
 ## Available Scripts
 

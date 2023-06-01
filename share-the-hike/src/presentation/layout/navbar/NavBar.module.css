@@ -1,0 +1,72 @@
+.navBar {
+  position: relative;
+  background: linear-gradient(
+    315deg,
+    var(--background-color-3),
+    var(--background-color-4)
+  );
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1rem;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.logoText {
+  margin: 0.1rem 1rem;
+  font-size: 1.7rem;
+  text-shadow: 1px 0px 10px var(--background-color-1);
+  font-family: Comic Sans MS;
+}
+
+.userButton {
+  position: absolute;
+  right: 0;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.link {
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.link:hover {
+  color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+.spacer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.userName {
+  color: rgb(26, 128, 40);
+  font-weight: bold;
+}

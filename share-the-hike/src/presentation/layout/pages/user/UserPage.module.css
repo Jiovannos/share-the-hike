@@ -1,0 +1,57 @@
+.userPage {
+  display: flex;
+  min-height: 95vh;
+  flex-direction: column;
+}
+.tabsPanel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+  width: 100%;
+  height: 2rem;
+  margin: 2rem;
+}
+.tab {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--primary-color);
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px var(--background-color-3);
+  transition: all 0.2s ease-in-out;
+}
+.tab:hover {
+  box-shadow: 0px 0px 15px var(--background-color-3);
+}
+.tab:active {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 3px var(--background-color-3);
+}
+.likeAllHeart {
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0.3rem;
+}
+
+.saveButton {
+  text-align: center;
+  align-self: center;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+.saveButton:hover {
+  text-decoration: underline;
+}

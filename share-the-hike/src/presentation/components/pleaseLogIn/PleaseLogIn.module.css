@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 100%;
+  background-color: none;
+}
+
+.center {
+  text-align: center;
+}

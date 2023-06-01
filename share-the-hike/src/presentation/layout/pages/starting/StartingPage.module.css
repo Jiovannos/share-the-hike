@@ -1,0 +1,44 @@
+.startingPage {
+  background-image: url("./waves.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  position: relative;
+  padding: 10px;
+  padding-bottom: 20px;
+  margin: 10px;
+  max-height: 500px;
+  width: 60vw;
+  border-radius: 30px;
+  box-shadow: -18px -18px 10px gray, 5px 8px 10px gray;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  box-shadow: -18px -8px 10px gray, 5px 18px 10px gray;
+}
+
+.card p {
+  padding: 15px 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(44, 38, 38);
+  text-align: center;
+}
+
+.card:hover p {
+  color: var(--secondary-color);
+}
