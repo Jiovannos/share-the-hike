@@ -24,7 +24,7 @@ const PostPage: React.FC = () => {
     const checkinUser = async () => {
       try {
         const res = await axios.get<any>(
-          `${process.env.REACT_APP_API_BASE_URL}server/auth/checkin`,
+          `${process.env.REACT_APP_API_BASE_URL}/server/auth/checkin`,
           {
             withCredentials: true,
           }
@@ -112,7 +112,7 @@ const PostPage: React.FC = () => {
     }
     const fetchPosts = async () => {
       const res = await axios.get(
-        `${process.env.REACT_APP_API_BASE_URL}server/posts/getall`
+        `${process.env.REACT_APP_API_BASE_URL}/server/posts/getall`
       );
       setOriginalPosts(res.data);
     };

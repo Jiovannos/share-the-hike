@@ -24,7 +24,7 @@ const UserButton: React.FC = () => {
   const handleSignOutClick = async () => {
     try {
       await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}server/auth/logout`,
+        `${process.env.REACT_APP_API_BASE_URL}/server/auth/logout`,
         null,
         {
           withCredentials: true,

@@ -21,7 +21,7 @@ const PostCard: React.FC<IPostCard> = ({
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}server/posts/like/${_id}`,
+        `${process.env.REACT_APP_API_BASE_URL}/server/posts/like/${_id}`,
         {},
         {
           withCredentials: true,

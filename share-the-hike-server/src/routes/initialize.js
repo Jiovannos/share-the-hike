@@ -81,7 +81,10 @@ router.post("/", async (req, res) => {
 
     res.json({ message: "Data initialized successfully." });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({
+      message: error.message,
+      stack: error.stack,
+    });
   }
 });
 

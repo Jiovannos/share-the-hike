@@ -6,13 +6,14 @@ const authRoutes = require("./src/routes/auth");
 const postRoutes = require("./src/routes/posts");
 const initializeRoutes = require("./src/routes/initialize");
 const port = process.env.PORT || 8000;
+const morgan = require("morgan");
 require("dotenv").config();
 const path = require("path");
 
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-// For development purposes
+
 app.use(
   cors({
     origin: "http://localhost:3000",
@@ -20,6 +21,7 @@ app.use(
   })
 );
 
+app.use(morgan("tiny"));
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "build")));
 
@@ -33,7 +35,6 @@ app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-// Start the server
 // Connect to MongoDB
 mongoose
   .connect(`${process.env.MONGO_DB_URL}/${process.env.MONGO_DB_DATABASE}`, {
@@ -41,8 +42,11 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
+    console.log("Connected to MongoDB");
+
+    // Start the server after connecting to the database
     app.listen(port, () => console.log("Server running on port " + port));
   })
   .catch((err) => {
-    console.log(err);
+    console.error("Error connecting to MongoDB: ", err);
   });

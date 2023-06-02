@@ -21,7 +21,7 @@ const UserPage: React.FC = () => {
     const checkinUser = async () => {
       try {
         const res = await axios.get<any>(
-          `${process.env.REACT_APP_API_BASE_URL}server/auth/checkin`,
+          `${process.env.REACT_APP_API_BASE_URL}/server/auth/checkin`,
           {
             withCredentials: true,
           }
@@ -56,7 +56,7 @@ const UserPage: React.FC = () => {
       // If tab is myfavorites, fetch post liked by the user
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}server/posts/${tab}`,
+          `${process.env.REACT_APP_API_BASE_URL}/server/posts/${tab}`,
           {
             withCredentials: true,
           }
@@ -80,7 +80,7 @@ const UserPage: React.FC = () => {
     const postIds = posts.map((post) => post._id);
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}server/posts/unLikeAll`,
+        `${process.env.REACT_APP_API_BASE_URL}/server/posts/unLikeAll`,
         { postIds, likeAll: false },
         { withCredentials: true }
       );

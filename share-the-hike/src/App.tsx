@@ -17,7 +17,7 @@ function App() {
     const checkinUser = async () => {
       try {
         const res = await axios.get<TUser>(
-          `${process.env.REACT_APP_API_BASE_URL}server/auth/checkin`,
+          `${process.env.REACT_APP_API_BASE_URL}/server/auth/checkin`,
           {
             withCredentials: true,
           }

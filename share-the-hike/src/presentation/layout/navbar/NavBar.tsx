@@ -22,7 +22,7 @@ const NavBar: React.FC = () => {
   const handleResetClick = async () => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}server/initialize`,
+        `${process.env.REACT_APP_API_BASE_URL}/server/initialize`,
         {},
         { withCredentials: true }
       );

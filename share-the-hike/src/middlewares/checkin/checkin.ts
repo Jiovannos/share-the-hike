@@ -8,7 +8,7 @@ export const checkinUser =
   async (dispatch: AppDispatch): Promise<AnyAction | undefined> => {
     try {
       const res = await axios.get<any>(
-        `${process.env.REACT_APP_API_BASE_URL}server/auth/checkin`,
+        `${process.env.REACT_APP_API_BASE_URL}/server/auth/checkin`,
         {
           withCredentials: true,
         }
