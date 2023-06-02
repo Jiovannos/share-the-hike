@@ -74,6 +74,7 @@ In the `share-the-hike-server` directory, you can run `npm run startPM2` to star
 
 **`MongoDB` must be installed and have no database called share_the_hike.** (What a luck that would be!!!)
 **Note that both ports 3000 (Client) and 8000 (Server) must be available.**
+Add a `.env` file in `share-the-hike` directory with `REACT_APP_API_BASE_URL=http://localhost:8000` inside.
 In the `share-the-hike-server` directory, you can run `npm run dev` to start the development server. Then navigate to `../share-the-hike` and run `npm start` to start the client server. You can access the application on [http://localhost:3000](http://localhost:3000).
 
 # `Usage`

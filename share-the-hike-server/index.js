@@ -36,8 +36,16 @@ app.get("/*", (req, res) => {
 });
 
 // Connect to MongoDB
+
+const dbUrl = process.env.MONGO_DB_URL
+  ? process.env.MONGO_DB_URL
+  : "mongodb://localhost:27017";
+
+const db = process.env.MONGO_DB_DATABASE
+  ? process.env.MONGO_DB_DATABASE
+  : "share-the-hike";
 mongoose
-  .connect(`${process.env.MONGO_DB_URL}/${process.env.MONGO_DB_DATABASE}`, {
+  .connect(`${dbUrl}/${db}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
